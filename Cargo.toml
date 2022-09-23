@@ -30,7 +30,7 @@ embassy-time-driver = ["embassy-time"]
 nb = "0.1.2"
 embedded-hal = "=1.0.0-alpha.8"
 embedded-hal-0-2 = { package = "embedded-hal", version = "0.2.7", features = ["unproven"] }
-esp-idf-sys = { version = "0.31.9", optional = true, default-features = false, features = ["native"] }
+esp-idf-sys = { git = "https://github.com/jendakol/esp-idf-sys", optional = true, default-features = false, features = ["native"] }
 critical-section = { version = "1.1", optional = true }
 embassy-sync = { version = "0.1", optional = true, git = "https://github.com/ivmarkov/embassy" }
 embassy-time = { version = "0.1", optional = true, features = ["tick-hz-1_000_000"], git = "https://github.com/ivmarkov/embassy" }
@@ -42,4 +42,4 @@ anyhow = "1"
 
 [dev-dependencies]
 anyhow = "1"
-esp-idf-sys = { version = "0.31.9", features = ["native", "binstart"] }
+esp-idf-sys = { git = "https://github.com/jendakol/esp-idf-sys", features = ["native", "binstart"] }
